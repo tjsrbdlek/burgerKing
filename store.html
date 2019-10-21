@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1280">
+<title>버거킹</title>
+<meta name="description" content="버거킹 홈페이지">
+<meta property="og:type" content="website">
+<meta property="og:title" content="버거킹">
+<meta property="og:url" content="http://csktp95.dothome.co.kr/burgerKing/">
+<meta property="og:image" content="http://csktp95.dothome.co.kr/burgerKing/open_graph.png">
+<meta property="og:description" content="버거킹 데스크탑 프로젝트">
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/common.css?v=<?php echo time()?>">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.js?v=<?php echo time()?>"></script>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="top_header">
+            <div class="util_wrap">
+                <ul class="util">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="bottom_header">
+                <h1 class="logo">
+                    <a href="index.html"><img src="images/header_logo.png" alt="버거킹"></a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="#">메뉴소개</a>
+                            <ul class="depth2">
+                                <li><a href="#">스페셜</a></li>
+                                <li><a href="#">프리미엄</a></li>
+                                <li><a href="#">와퍼&amp;버거</a></li>
+                                <li><a href="#">치킨버거</a></li>
+                                <li><a href="#">사이드</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">아침메뉴</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">매장소개</a>
+                            <ul class="depth2">
+                                <li><a href="#">매장찾기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul class="depth2">
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">브랜드 스토리</a>
+                            <ul class="depth2">
+                                <li><a href="#">버거킹 스토리</a></li>
+                                <li><a href="#">WHY 버거킹</a></li>
+                                <li><a href="#">버거킹 NEWS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="link_wrap">
+                    <div class="gnb_delivery">
+                        <a href="#">딜리버리</a>
+                    </div>
+                    <ul class="header_sns">
+                        <li>
+                        <a href="#" class="header_yotube">유튜브</a>
+                        </li>
+                        <li>
+                        <a href="#" class="header_facebook">페이스북</a>
+                        </li>
+                        <li>
+                        <a href="#" class="header_insta">인스타</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+    <main id="container" class="store_page">
+        <div class="sub_visual">
+            <h3>매장소개</h3>
+            <p>고객님 주변에있는 버거킹을 찾아보세요!</p>
+        </div>
+        <div class="content">
+            <section class="section1">
+                <ul class="tab_store">
+                    <li><a href="#">가까운매장</a></li>
+                    <li><a href="#">매장명검색</a></li>
+                    <li class="active"><a href="#">지역검색</a></li>
+                </ul>
+                <div id="map" style="width:560px;height:500px;" class="maps">
+                </div>
+<!--                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a671de10e4d2939ed705c463a3618767"></script>-->
+<!--
+                <script>
+                    var container = document.getElementById('map'); 
+                    //지도를 담을 영역의 DOM 레퍼런스
+                    var options = { //지도를 생성할 때 필요한 기본 옵션
+                        center: new kakao.maps.LatLng(37.569944778696616,126.98808732757477), //지도의 중심좌표.
+                        level: 2 //지도의 레벨(확대, 축소 정도)
+                    };
+                    var map = new kakao.maps.Map(container, options);
+                    //지도 생성 및 객체 리턴
+                    
+                    // 지도를 클릭한 위치에 표출할 마커입니다
+                    var marker = new kakao.maps.Marker({
+                    // 지도 중심좌표에 마커를 생성합니다
+                    position: map.getCenter()
+                    });
+                    // 지도에 마커를 표시합니다
+                    marker.setMap(map);
+                </script>
+-->
+                <div class="map_wrap">
+                    <form>
+                    <fieldset>
+                    <legend>매장찾기옵션</legend>
+                        <div class="store_option">
+                            <h3 class="tit">매장옵션</h3>
+                        </div>
+                            <div class="select_option">
+                                <input type="checkbox" id="all">
+                                <label for="all" class="noselect"><span>전체</span></label>
+                                <input type="checkbox" id="de">
+                                <label for="de" class="noselect">딜리버리</label>
+                                <input type="checkbox" id="king">
+                                <label for="king" class="noselect">킹오더</label>
+                                <input type="checkbox" id="24h">
+                                <label for="24h" class="noselect">24시간</label>
+                                <input type="checkbox" id="mor">
+                                <label for="mor" class="noselect">아침메뉴</label>
+                                <input type="checkbox" id="pak">
+                                <label for="pak" class="noselect">주차가능</label>
+                                <input type="checkbox" id="der">
+                                <label for="der" class="noselect">드라이브스루</label>
+                            </div>
+                            <div class="country_wrap">
+                                <div class="select_country">
+                                    <select name="country">
+                                        <option value="">시/도</option>
+                                        <option value="001">서울특별시</option>
+                                        <option value="002">경기도</option>
+                                        <option value="003">인천광역시</option>
+                                        <option value="004">대전광역시</option>
+                                        <option value="005">세종특별자치시</option>
+                                        <option value="006">충청남도</option>
+                                        <option value="007">경상남도</option>
+                                        <option value="008">울산광역시</option>
+                                        <option value="009">부산광역시</option>
+                                        <option value="010">대구광역시</option>
+                                        <option value="011">제주특별자치도</option>
+                                        <option value="012">전라북도</option>
+                                        <option value="013">충청북도</option>
+                                        <option value="014">광주광역시</option>
+                                        <option value="015">전라남도</option>
+                                        <option value="016">경상북도</option>
+                                        <option value="017">강원도</option>
+                                    </select>
+                                </div>
+                                <div class="select_country select_country2">
+                                    <select name="region2">
+                                        <option value="">시/군/구</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="매장명 입력">
+                                <button type="submit" class="btn_result"></button>
+                            </div>
+                            <div class="store_result">
+                                <div class="result_val">
+                                    <div class="info_wrap">
+                                        <span>종로점</span>
+                                        <p>서울 특별시 종로구 종로 94</p>
+                                        <p>02-2285-4838</p>
+                                    </div>
+                                    <div class="ico_wrap">
+                                        <img src="images/ico_delivery_03.png">
+                                        <img src="images/ico_parking_03.png">
+                                        <img src="images/ico_morning_03.png">
+                                        <img src="images/ico_24_03.png">
+                                    </div>
+                                </div>                                <div class="result_val result_val2">
+                                    <div class="info_wrap">
+                                        <span>종로점</span>
+                                        <p>서울 특별시 종로구 종로 94</p>
+                                        <p>02-2285-4838</p>
+                                    </div>
+                                    <div class="ico_wrap">
+                                        <img src="images/ico_delivery_03.png">
+                                        <img src="images/ico_parking_03.png">
+                                        <img src="images/ico_morning_03.png">
+                                        <img src="images/ico_24_03.png">
+                                    </div>
+                                </div> 
+                                <div class="result_val result_val3">
+                                    <div class="info_wrap">
+                                        <span>종로점</span>
+                                        <p>서울 특별시 종로구 종로 94</p>
+                                        <p>02-2285-4838</p>
+                                    </div>
+                                    <div class="ico_wrap">
+                                        <img src="images/ico_delivery_03.png">
+                                        <img src="images/ico_parking_03.png">
+                                        <img src="images/ico_morning_03.png">
+                                        <img src="images/ico_24_03.png">
+                                    </div>
+                                </div>
+                            </div>
+                    </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="footer_inner">
+            <h5 class="footer_logo"><a href="#"><img src="images/footer_logo_03.png" alt="로고"></a></h5>
+            <div class="txt_wrap">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">법적고지</a>
+                <div class="txt_info">
+                <p>서울 종로구 삼봉로 71 G타워 2층 주식회사 비케이알 TEL 02-6331-8282 FAX 02-3775-4325<br>
+                    사업자 등록번호 110-86-76227 [주]BKR 대표이사 문영주</p>
+                <span>Copyright 2019 BKR Co., Ltd. All right Reserved</span>
+                </div>
+            </div>
+            <div class="btn_footer">
+                <a href="#">인재채용</a>
+                <a href="#">가맹접모집</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
